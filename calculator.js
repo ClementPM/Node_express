@@ -12,7 +12,7 @@ app.post('/', function(req, res){
   let num1 = Number(req.body.num1);
   let num2 = Number(req.body.num2);
   let total = num1 + num2
-  res.send("The total is " + total);
+  res.send(`The total is ${total}`);
 });
 
 // BMI CALCULATOR
@@ -25,7 +25,7 @@ app.post('/bmiCalculator', function(req, res){
   let height = parseFloat(req.body.height);
 
   let bmi = weight / (height * height);
-  res.send("Your BMI is " + bmi);
+  res.send(`Your BMI is ${bmi}`);
 });
 
 app.listen(3000);
